@@ -9,7 +9,7 @@ A modern, responsive personal portfolio website showcasing AI projects, technica
 
 ## 🚀 Live Demo
 
-[View Live Portfolio](https://your-username.github.io/portfolio/) *(Update with actual deployment URL)*
+[View Live Portfolio](https://agentictony.github.io/Lexicon-Personal-Portfolio-Project/)
 
 ## 📋 Project Overview
 
@@ -82,8 +82,8 @@ This portfolio website was developed as a frontend course project to demonstrate
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/portfolio.git
-cd portfolio
+git clone https://github.com/AgenticTony/Lexicon-Personal-Portfolio-Project.git
+cd Lexicon-Personal-Portfolio-Project
 ```
 
 2. Install dependencies:
