@@ -1,0 +1,182 @@
+.section {
+  padding: var(--space-4xl) 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Header section */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-4xl);
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* 3-Card CTA Grid */
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .ctaGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+}
+
+.ctaCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+}
+
+.ctaCard:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+.ctaPrimary {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(123, 97, 255, 0.05));
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.ctaPrimary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+}
+
+.ctaIcon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaContent {
+  flex: 1;
+  margin-bottom: var(--space-lg);
+}
+
+.ctaTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.ctaDescription {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+.ctaAction {
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  background: rgba(59, 130, 246, 0.1);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.ctaArrow {
+  font-size: 1.25rem;
+  color: var(--accent-primary);
+  font-weight: 700;
+  transition: transform var(--transition-fast);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .title {
+    font-size: clamp(1.5rem, 6vw, 1.75rem);
+    margin-bottom: var(--space-md);
+  }
+
+  .subheading {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .description {
+    font-size: 0.9375rem;
+  }
+
+  .ctaGrid {
+    gap: var(--space-md);
+  }
+
+  .ctaCard {
+    padding: var(--space-lg);
+  }
+
+  .ctaIcon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .ctaTitle {
+    font-size: 1.125rem;
+  }
+
+  .ctaDescription {
+    font-size: 0.875rem;
+  }
+}

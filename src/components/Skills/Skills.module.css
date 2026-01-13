@@ -1,0 +1,123 @@
+.section {
+  padding: var(--space-4xl) 0;
+  background: var(--bg-secondary);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.category {
+  background: var(--bg-card);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-base);
+}
+
+.category:first-child {
+  border-color: var(--accent-primary);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.category:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+}
+
+.category:first-child:hover {
+  border-color: var(--accent-primary);
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-lg);
+}
+
+.categoryTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+.categoryLevel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: var(--font-mono);
+}
+
+.category:first-child .categoryLevel {
+  color: var(--accent-primary);
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.skillItem {
+  padding-bottom: var(--space-md);
+}
+
+.skillItem:not(:last-child) {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.skillName {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.skillDescription {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .category {
+    padding: var(--space-lg);
+  }
+}
