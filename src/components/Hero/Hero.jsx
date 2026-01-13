@@ -1,5 +1,6 @@
 import { siteData } from "../../data/content";
 import styles from "./Hero.module.css";
+import heroImage from "/hero_section_head_shot.png";
 
 function Hero() {
   const scrollToSection = (sectionId) => {
@@ -80,7 +81,7 @@ function Hero() {
           <div className={styles.imageWrapper}>
             <div className={styles.imageContainer}>
               <img
-                src="/hero_section_head_shot.png"
+                src={heroImage}
                 alt="Anthony Foran - AI Developer"
                 className={styles.profileImage}
               />

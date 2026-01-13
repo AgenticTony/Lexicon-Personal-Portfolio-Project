@@ -1,5 +1,7 @@
 import { siteData } from "../../data/content";
 import styles from "./About.module.css";
+import aboutImage from "/about_section.png";
+import heroImage from "/hero_section_head_shot.png";
 
 function About() {
   // Function to parse markdown-style bold text
@@ -50,8 +52,7 @@ function About() {
             <div className={styles.imageWrapper}>
               <div className={styles.imageContainer}>
                 <img
-                  src="/hero_section_head_shot.png
-                  "
+                  src={heroImage}
                   alt="Anthony Foran - AI Developer"
                   className={styles.image}
                 />
